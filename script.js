@@ -1,3 +1,3 @@
-function formSub(event) {
-    event.preventDefault();
+function formSub() {
+    print("pog")
 }
