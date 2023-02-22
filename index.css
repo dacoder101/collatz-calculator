@@ -1,0 +1,30 @@
+body {
+    border: 25px solid darkslategrey;
+    background-color: darkslategrey;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: verdana;
+}
+div {
+    background-color: lightgrey;
+    border: 10px solid grey;
+    padding: 15px;
+    margin: 15px;
+}
+button {
+    background-color: darkgrey;
+}
+
+table {
+    border: 2px solid black;
+}
+th {
+    border: 1px solid black;
+    font-weight: normal;
+}
+td {
+    border: 1px solid black;
+    font-family: courier;
+    font-weight: bold;
+}
