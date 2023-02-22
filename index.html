@@ -8,5 +8,38 @@
     </head>
     <body>
         <script src="script.js"></script>
+        <div id="titlediv">
+            <h2>Collatz Conjecture Calculator</h2>
+            <p>The Collatz Conjecture, or 3n+1 is a math problem that asks if two operations will eventually turn all positive to 1.</p>
+            <p>This calculator will determine the amount of steps any positive number will take to reach 1.</p>
+            <p>The rules are as follows, Odd number: multiply by 3, add 1. Even: divide by 2.</p>
+            <p>When you enter a positive integer, it will show the amount of steps and the sequence of numbers taken to 1.</p>
+        </div>
+        <hr>
+        <div id="formdiv">
+            <form id="form">
+                <label for="posIntSub">Any Positive Integer:</label>
+                <input min="1" value="4" id="posIntSub" type="number" placeholder="Enter Here!"><br>
+                <input type="submit" value="Calculate">
+            </form>
+        </div>
+        <div id="tablediv">
+            <h3>Result:</h3>
+            <table id="table">
+                <tr>
+                    <th>Steps</th>
+                    <td id="steps">2</td>
+                </tr>
+                <tr>
+                    <th>Sequence</th>
+                    <td id="sequence">4, 2, 1</td>
+                </tr>
+                <tr>
+                    <th>Max Number</th>
+                    <td id="maxnum">4</td>
+                </tr>
+            </table>
+        </div>
+        <hr>
     </body>
 </html>
