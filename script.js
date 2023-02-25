@@ -1,15 +1,13 @@
 window.onload=function() {
+
     var form = document.getElementById("form")
     var stepsElement = document.getElementById("steps")
     var sequenceElement = document.getElementById("sequence")
     var maxNumElement = document.getElementById("maxNum")
-    function reset() {
-        stepsElement.textContent = ""
-        sequenceElement.textContent = ""
-        maxNumElement.textContent = ""
-    }
+
     form.addEventListener("submit", (e) => {
         e.preventDefault()
+        
         var posInt = parseInt(document.getElementById("posIntSub").value)
         var sequence = [posInt]
         var maxNum = posInt
