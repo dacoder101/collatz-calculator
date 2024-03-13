@@ -6,7 +6,7 @@ var maxNumElement = document.getElementById("maxNum")
 form.addEventListener("submit", (e) => {
     e.preventDefault()
 
-    if (!formElement.value == null) {
+    if (!form.value == null) {
         
         var posInt = parseInt(document.getElementById("posIntSub").value)
         var sequence = [posInt]
