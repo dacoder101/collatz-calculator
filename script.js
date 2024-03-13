@@ -1,38 +1,34 @@
-var form = document.getElementById("form")
-var stepsElement = document.getElementById("steps")
-var sequenceElement = document.getElementById("sequence")
-var maxNumElement = document.getElementById("maxNum")
+let form = document.getElementById("form");
+let stepsElement = document.getElementById("steps");
+let sequenceElement = document.getElementById("sequence");
+let maxNumElement = document.getElementById("maxNum");
 
 form.addEventListener("submit", (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if (!form.value == null) {
-        
-        var posInt = parseInt(document.getElementById("posIntSub").value)
-        var sequence = [posInt]
-        var maxNum = posInt
-        var strSequence = ""
-    
-        while (posInt != 1) {
-            if (posInt % 2 == 0) {
-                posInt /= 2
-            } else {
-                posInt *= 3
-                posInt += 1
-            }
+    let posInt = parseInt(document.getElementById("posIntSub").value);
+    let sequence = [posInt];
+    let maxNum = posInt;
+    let strSequence = "";
 
-            sequence.push(posInt)
-            if (maxNum < posInt) {maxNum = posInt}
+    while (posInt != 1) {
+        if (posInt % 2 == 0) {
+            posInt /= 2;
+        } else {
+            posInt *= 3;
+            posInt += 1;
         }
 
-        steps = sequence.length - 1
-        for (let i = 0; i < sequence.length; i++) {
-            strSequence += sequence[i] + ", "
+        sequence.push(posInt);
+        if (maxNum < posInt) {
+            maxNum = posInt;
         }
-        strSequence = strSequence.slice(0, -2)
-    
-        stepsElement.textContent = String(steps)
-        sequenceElement.textContent = strSequence
-        maxNumElement.textContent = String(maxNum)
     }
-})
+
+    let steps = sequence.length - 1;
+    strSequence = sequence.join(", ");
+    
+    stepsElement.textContent = String(steps);
+    sequenceElement.textContent = strSequence;
+    maxNumElement.textContent = String(maxNum);
+});
