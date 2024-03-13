@@ -1,12 +1,12 @@
-window.onload=function() {
+var form = document.getElementById("form")
+var stepsElement = document.getElementById("steps")
+var sequenceElement = document.getElementById("sequence")
+var maxNumElement = document.getElementById("maxNum")
 
-    var form = document.getElementById("form")
-    var stepsElement = document.getElementById("steps")
-    var sequenceElement = document.getElementById("sequence")
-    var maxNumElement = document.getElementById("maxNum")
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
 
-    form.addEventListener("submit", (e) => {
-        e.preventDefault()
+    if !(formElement.value == null) {
         
         var posInt = parseInt(document.getElementById("posIntSub").value)
         var sequence = [posInt]
@@ -15,16 +15,16 @@ window.onload=function() {
     
         while (posInt != 1) {
             if (posInt % 2 == 0) {
-            posInt /= 2
+                posInt /= 2
             } else {
-            posInt *= 3
-            posInt += 1
+                posInt *= 3
+                posInt += 1
             }
-    
+
             sequence.push(posInt)
             if (maxNum < posInt) {maxNum = posInt}
         }
-    
+
         steps = sequence.length - 1
         for (let i = 0; i < sequence.length; i++) {
             strSequence += sequence[i] + ", "
@@ -34,5 +34,5 @@ window.onload=function() {
         stepsElement.textContent = String(steps)
         sequenceElement.textContent = strSequence
         maxNumElement.textContent = String(maxNum)
-    })
-}
+    }
+})
