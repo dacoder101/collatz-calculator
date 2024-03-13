@@ -1,2 +1,2 @@
 # Collatz Calculator
-A Collatz Conjecture calculator.
+A Collatz Conjecture sequence calculator.
